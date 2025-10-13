@@ -11,10 +11,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  GlobalKey<ScaffoldState> _drawerkey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      endDrawerEnableOpenDragGesture: true,
+      key: _drawerkey,
+      drawer: Drawer(),
       backgroundColor: bgColor,
       body: SafeArea(
         child: Container(
@@ -41,7 +44,9 @@ class _HomeState extends State<Home> {
                     Row(
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            _drawerkey.currentState?.openDrawer();
+                          },
                           icon: Icon(Icons.menu, color: white),
                         ),
                         SizedBox(width: 16),
