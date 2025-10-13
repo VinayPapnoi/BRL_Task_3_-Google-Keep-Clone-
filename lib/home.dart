@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:brl_task_3/colors.dart';
+import 'package:brl_task_3/sideMenuBar.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -17,7 +18,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       endDrawerEnableOpenDragGesture: true,
       key: _drawerkey,
-      drawer: Drawer(),
+      drawer: Sidemenu(),
       backgroundColor: bgColor,
       body: SafeArea(
         child: Container(
