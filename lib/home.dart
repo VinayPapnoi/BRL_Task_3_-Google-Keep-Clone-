@@ -29,20 +29,53 @@ class _HomeState extends State<Home> {
                   boxShadow: [
                     BoxShadow(
                       color: Color.fromRGBO(0, 0, 0, 51),
-                      spreadRadius: 2,
+                      spreadRadius: 1,
                       blurRadius: 3,
                     ),
                   ],
                 ),
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.menu, color: white,)
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.menu, color: white),
+                        ),
+                        SizedBox(width: 16),
+
+                        Container(
+                          height: 65,
+                          width: 200,
+
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Search Your Notes',
+                                style: TextStyle(
+                                  color: Color.fromRGBO(255, 255, 255, 127),
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                    Container(
-                      child: Text('Search Your Notes')
-                    )
+
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.grid_view, color: white),
+                        ),
+                        SizedBox(width: 9),
+                        CircleAvatar(backgroundColor: Colors.white),
+                      ],
+                    ),
                   ],
                 ),
               ),
