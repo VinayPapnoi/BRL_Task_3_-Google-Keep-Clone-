@@ -14,6 +14,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       backgroundColor: bgColor,
       body: SafeArea(
         child: Container(
@@ -66,15 +67,36 @@ class _HomeState extends State<Home> {
                       ],
                     ),
 
-                    Row(
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(Icons.grid_view, color: white),
-                        ),
-                        SizedBox(width: 9),
-                        CircleAvatar(backgroundColor: Colors.white),
-                      ],
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      child: Row(
+                        children: [
+                          TextButton(
+                            style: TextButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              overlayColor: const Color.fromRGBO(
+                                255,
+                                255,
+                                255,
+                                0.3,
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: const Icon(
+                              Icons.grid_view,
+                              color: Colors.white,
+                            ),
+                          ),
+
+                          SizedBox(width: 9),
+                          CircleAvatar(
+                            radius: 16,
+                            backgroundColor: Colors.white,
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
