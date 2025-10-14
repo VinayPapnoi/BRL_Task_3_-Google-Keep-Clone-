@@ -66,6 +66,7 @@ class _SidemenuState extends State<Sidemenu> {
                 topLeft: Radius.circular(50),
                 topRight: Radius.circular(50),
                 bottomRight: Radius.circular(50),
+                bottomLeft: Radius.circular(50),
               ),
             ),
           ),
@@ -90,9 +91,9 @@ class _SidemenuState extends State<Sidemenu> {
       margin: EdgeInsets.only(right: 15),
       child: TextButton(
         style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(
-            const Color.fromARGB(100, 8, 22, 228),
-          ),
+          //backgroundColor: WidgetStateProperty.all(
+          // const Color.fromARGB(100, 8, 22, 228),
+          //  ),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
@@ -130,9 +131,9 @@ class _SidemenuState extends State<Sidemenu> {
       margin: EdgeInsets.only(right: 15),
       child: TextButton(
         style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(
-            const Color.fromARGB(100, 8, 22, 228),
-          ),
+          //backgroundColor: WidgetStateProperty.all(
+          // const Color.fromARGB(100, 8, 22, 228),
+          //  ),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
@@ -167,9 +168,9 @@ class _SidemenuState extends State<Sidemenu> {
       margin: EdgeInsets.only(right: 15),
       child: TextButton(
         style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(
-            const Color.fromARGB(100, 8, 22, 228),
-          ),
+          //backgroundColor: WidgetStateProperty.all(
+          // const Color.fromARGB(100, 8, 22, 228),
+          //  ),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
@@ -204,9 +205,9 @@ class _SidemenuState extends State<Sidemenu> {
       margin: EdgeInsets.only(right: 15),
       child: TextButton(
         style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(
-            const Color.fromARGB(100, 8, 22, 228),
-          ),
+          //backgroundColor: WidgetStateProperty.all(
+          // const Color.fromARGB(100, 8, 22, 228),
+          //  ),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
@@ -241,9 +242,9 @@ class _SidemenuState extends State<Sidemenu> {
       margin: EdgeInsets.only(right: 15),
       child: TextButton(
         style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(
-            const Color.fromARGB(100, 8, 22, 228),
-          ),
+          //backgroundColor: WidgetStateProperty.all(
+          // const Color.fromARGB(100, 8, 22, 228),
+          //  ),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
