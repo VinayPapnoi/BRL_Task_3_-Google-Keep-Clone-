@@ -63,7 +63,7 @@ class _AddEditNoteScreenState extends ConsumerState<AddEditNoteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
+      backgroundColor: const Color.fromARGB(255, 33, 35, 44),
       appBar: AppBar(
         backgroundColor: cardColor,
         iconTheme: IconThemeData(color: white),

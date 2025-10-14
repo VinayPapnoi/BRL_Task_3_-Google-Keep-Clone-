@@ -180,7 +180,7 @@ class _HomeState extends ConsumerState<Home> {
           child: Column(
             children: [
               Text(
-                "ALL",
+                "",
                 style: TextStyle(
                   color: white.withAlpha(128),
                   fontSize: 17,
@@ -227,6 +227,7 @@ class _HomeState extends ConsumerState<Home> {
                       child: Container(
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 19, 21, 29),
                           border: Border.all(color: white.withAlpha(100)),
                           borderRadius: BorderRadius.circular(7),
                         ),
