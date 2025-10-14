@@ -44,7 +44,7 @@ class _HomeState extends ConsumerState<Home> {
                       ),
                       SizedBox(width: 10),
 
-                      // Search bar - in the middle
+                      
                       Expanded(
                         child: Container(
                           padding: EdgeInsets.symmetric(
@@ -53,7 +53,7 @@ class _HomeState extends ConsumerState<Home> {
                           ),
                           height: 55,
                           decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 70, 73, 85),
+                            color: const Color.fromARGB(255, 57, 60, 70),
                             borderRadius: BorderRadius.circular(50),
                           ),
                           child: Row(
@@ -210,8 +210,8 @@ class _HomeState extends ConsumerState<Home> {
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: notes.length,
-                  mainAxisSpacing: 12,
-                  crossAxisSpacing: 12,
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 8,
                   crossAxisCount: 2,
                   itemBuilder: (context, index) {
                     final note = notes[index];
@@ -228,8 +228,8 @@ class _HomeState extends ConsumerState<Home> {
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 19, 21, 29),
-                          border: Border.all(color: white.withAlpha(100)),
-                          borderRadius: BorderRadius.circular(7),
+                          border: Border.all(color: const Color.fromARGB(255, 117, 115, 128).withAlpha(100)),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -244,7 +244,7 @@ class _HomeState extends ConsumerState<Home> {
                                         : note.title,
                                     style: TextStyle(
                                       color: white,
-                                      fontSize: 20,
+                                      fontSize: 17,
                                       fontWeight: FontWeight.bold,
                                     ),
                                     maxLines: 2,
