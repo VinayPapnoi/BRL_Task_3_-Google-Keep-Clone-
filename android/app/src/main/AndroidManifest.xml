@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="brl_task_3"
+        android:label="Lil Keep"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
