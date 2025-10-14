@@ -16,9 +16,6 @@ class Home extends ConsumerStatefulWidget {
 
 class _HomeState extends ConsumerState<Home> {
   GlobalKey<ScaffoldState> _drawerkey = GlobalKey();
-  String note =
-      "Sample Note: this is a note lekjfiosejfosiefjsdkfsekdfjsdlkfjsdlkfjsdlkfjsldkfjsdlkfjksdl Sample Note: this is a note lekjfiosejfosiefjsdkfsekdfjsdlkfjsdlkfjsdlkfjsldkfjsdlkfjksdl Sample Note: this is a note lekjfiosejfosiefjsdkfsekdfjsdlkfjsdlkfjsdlkfjsldkfjsdlkfjksdl Sample Note: this is a note lekjfiosejfosiefjsdkfsekdfjsdlkfjsdlkfjsdlkfjsldkfjsdlkfjksdl Sample Note: this is a note lekjfiosejfosiefjsdkfsekdfjsdlkfjsdlkfjsdlkfjsldkfjsdlkfjksdl Sample Note: this is a note lekjfiosejfosiefjsdkfsekdfjsdlkfjsdlkfjsdlkfjsldkfjsdlkfjksdl ";
-  String note1 = "Sample Note: this is a smaller notesgsevfs";
 
   @override
   Widget build(BuildContext context) {
@@ -26,75 +23,77 @@ class _HomeState extends ConsumerState<Home> {
       endDrawerEnableOpenDragGesture: true,
       key: _drawerkey,
       drawer: Sidemenu(),
-      backgroundColor: bgColor,
+      backgroundColor: const Color.fromARGB(255, 33, 35, 44),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  width: MediaQuery.of(context).size.width,
-                  height: 55,
-                  decoration: BoxDecoration(
-                    color: const Color.fromRGBO(45, 46, 51, 1),
-                    borderRadius: BorderRadius.circular(8),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color.fromRGBO(0, 0, 0, 51),
-                        spreadRadius: 1,
-                        blurRadius: 3,
-                      ),
-                    ],
-                  ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   child: Row(
                     children: [
-                      
                       IconButton(
                         onPressed: () {
                           _drawerkey.currentState?.openDrawer();
                         },
                         icon: Icon(Icons.menu, color: white),
-                        padding: EdgeInsets.zero, 
-                        constraints:
-                            BoxConstraints(), 
+                        padding: EdgeInsets.zero,
+                        constraints: BoxConstraints(),
                       ),
-                      SizedBox(width: 16),
+                      SizedBox(width: 10),
+
+                      // Search bar - in the middle
                       Expanded(
-                        
-                        child: Text(
-                          'Search Your Notes',
-                          style: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 127),
-                            fontSize: 20,
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 10,
+                            horizontal: 16,
                           ),
-                        ),
-                      ),
-                      
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          shape: RoundedRectangleBorder(
+                          height: 55,
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 70, 73, 85),
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          overlayColor: const Color.fromRGBO(
-                            255,
-                            255,
-                            255,
-                            0.3,
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  'Search Your Notes',
+                                  style: TextStyle(
+                                    color: Color.fromRGBO(255, 255, 255, 127),
+                                    fontSize: 15,
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(50),
+                                  ),
+                                  overlayColor: const Color.fromRGBO(
+                                    255,
+                                    255,
+                                    255,
+                                    0.3,
+                                  ),
+                                  padding: EdgeInsets.all(8),
+                                  minimumSize: Size(40, 40),
+                                ),
+                                onPressed: () {},
+                                child: const Icon(
+                                  Icons.grid_view,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
-                          padding: EdgeInsets.all(
-                            8,
-                          ),
-                          minimumSize: Size(
-                            40,
-                            40,
-                          ), 
                         ),
-                        onPressed: () {},
-                        child: const Icon(Icons.grid_view, color: Colors.white),
                       ),
-                      SizedBox(width: 9),
+
+                      SizedBox(width: 10),
+
                       CircleAvatar(radius: 16, backgroundColor: Colors.white),
                     ],
                   ),
@@ -158,22 +157,20 @@ class _HomeState extends ConsumerState<Home> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: cardColor,
+        backgroundColor: const Color.fromARGB(255, 139, 180, 255),
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const AddEditNoteScreen()),
           );
         },
-        child: Icon(Icons.add, color: white),
+        child: Icon(Icons.add, color: Colors.black),
       ),
     );
   }
 
   Widget notesSectionAll() {
-    final notes = ref.watch(
-      notesProvider,
-    );
+    final notes = ref.watch(notesProvider);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
