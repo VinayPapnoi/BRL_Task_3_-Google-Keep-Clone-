@@ -60,7 +60,7 @@ class _HomeState extends ConsumerState<Home> {
                             children: [
                               Expanded(
                                 child: Text(
-                                  'Search Your Notes',
+                                  'Search Keep',
                                   style: TextStyle(
                                     color: Color.fromRGBO(255, 255, 255, 127),
                                     fontSize: 15,
